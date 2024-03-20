@@ -1,0 +1,60 @@
+---
+import beachVideo from "../assets/video/beach.mp4";
+import HomeTitle from "../components/HomeTitle.jsx";
+import BottomToTop from "../components/BottomToTopFadeAnimation.jsx";
+import Typewriter from "typewriter-effect";
+---
+
+<div class="justify-center items-center bg-gray-800 h-screen w-screen">
+  <div class="absolute grid items-center w-full h-full bg-black bg-opacity-30">
+    <!-- <HomeTitle client:load /> -->
+    <BottomToTop client:load>
+      <div class="flex flex-col items-center justify-center w-full">
+        <!-- <p class="text-white text-[150px] font-extrabold">SURFING</p> -->
+        <p class="text-white text-[40px] font-extralight -mt-16">
+          Ocean Adventures
+        </p>
+
+        <div class="text-white text-[100px] font-extrabold uppercase">
+          <Typewriter
+            client:load
+            options={{
+              strings: [
+                "Scuba Diving",
+                "Snorkeling",
+                "Surfing",
+                "Jet Skiing",
+                "Parasailing",
+                "Kayaking",
+                "Deep-Sea Fishing",
+                "Whale Watching",
+                "Sailing",
+                "Swimming with Dolphins",
+                "Windsurfing",
+                "Coasteering",
+                "Kite Surfing",
+              ],
+              autoStart: true,
+              loop: true,
+            }}
+          />
+        </div>
+      </div>
+    </BottomToTop>
+  </div>
+  <div class="absolute right-10 top-10">
+    <BottomToTop client:load>
+      <span
+        class="bg-green-700 text-white p-4 px-6 rounded-xl font-medium text-lg"
+        >BOOK A ITEM</span
+      >
+    </BottomToTop>
+  </div>
+  <div class="w-full h-full">
+    <video
+      class="w-full h-full object-cover"
+      loop={true}
+      autoplay={true}
+      src={beachVideo}></video>
+  </div>
+</div>
